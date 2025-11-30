@@ -1,0 +1,117 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: linear-gradient(to right, #f0f4f8, #d9e2ec);
+  color: #333;
+  padding: 10px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 30px 20px;
+  background: #4a90e2;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1em;
+  color: #e0e7ff;
+}
+
+/* Main Cards */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+/* Input Styles */
+input, select {
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+button.btn {
+  background: #4a90e2;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+button.btn:hover {
+  background: #357ab8;
+}
+
+/* Task Input Flex */
+.task-input {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Task List */
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-list li {
+  background: #f4f6fa;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-list li button {
+  background: #ff6b6b;
+  padding: 5px 10px;
+  font-size: 0.9em;
+}
+
+.task-list li button:hover {
+  background: #e53935;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #555;
+  font-size: 0.9em;
+}
+
+/* Responsive */
+@media(max-width: 600px) {
+  .task-input {
+    flex-direction: column;
+  }
+}
