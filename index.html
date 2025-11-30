@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Family Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Family Task Manager</h1>
+    <p>Track, share, and recognize unpaid care work</p>
+  </header>
+
+  <main>
+    <!-- Login Section -->
+    <section id="login-section" class="card">
+      <h2>Login</h2>
+      <input type="text" id="username" placeholder="Enter your name">
+      <button class="btn" onclick="login()">Login</button>
+    </section>
+
+    <!-- Task Manager Section -->
+    <section id="task-section" style="display:none;" class="card">
+      <h2>Welcome, <span id="user-display"></span>!</h2>
+
+      <div class="task-input">
+        <select id="task-member">
+          <option value="">Select Family Member</option>
+          <option value="Alice">Alice</option>
+          <option value="Bob">Bob</option>
+          <option value="Carol">Carol</option>
+        </select>
+        <select id="task-type">
+          <option value="">Select Task</option>
+          <option value="Cooking">Cooking</option>
+          <option value="Cleaning">Cleaning</option>
+          <option value="Child Care">Child Care</option>
+          <option value="Elder Care">Elder Care</option>
+        </select>
+        <input type="number" id="task-hours" placeholder="Hours" min="0.5" step="0.5">
+        <button class="btn" onclick="addTask()">Add Task</button>
+      </div>
+
+      <h3>Tasks List</h3>
+      <ul id="task-list" class="task-list"></ul>
+
+      <h3>Weekly Task Analytics</h3>
+      <canvas id="taskChart" width="400" height="200"></canvas>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Family Task Manager</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
